@@ -1,0 +1,39 @@
+package com.example.nuniformbeta;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class Student extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_student);
+
+
+    }
+
+    public void getInput (View v) {
+        EditText studentID = findViewById(R.id.studentID);
+        int input = Integer.parseInt(studentID.getText().toString());
+        Log.d("enter", String.valueOf(input));
+
+        if (input.equals(studentID) && input.equals(studentID))
+        {
+            Intent i = new Intent(this, Order.class);
+            startActivity(i);
+
+        if (input.equals(studentID) && input.equals(studentID)) {
+            Toast.makeText(this, "You are logged in", Toast.LENGTH_LONG).show();
+            return;
+        } else {
+            Toast.makeText(this, "Please enter your StudentID", Toast.LENGTH_LONG).show();
+            return;
+        }
+    }
