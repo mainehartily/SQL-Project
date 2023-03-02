@@ -19,23 +19,19 @@ public class Student extends AppCompatActivity {
 
     }
 
-    public void getInput (View v) {
+    public void getInput(View v) {
         EditText studentID = findViewById(R.id.studentID);
         int input = Integer.parseInt(studentID.getText().toString());
         Log.d("enter", String.valueOf(input));
 
-        if (input.equals(studentID) && input.equals(studentID))
+        if (studentID.equals("")) // for user who doesn't fill the form
         {
-            Intent i = new Intent(this, Order.class);
-            startActivity(i);
-
-        if (input.equals(studentID) && input.equals(studentID)) {
-            Toast.makeText(this, "You are logged in", Toast.LENGTH_LONG).show();
-            return;
+            Toast.makeText(getApplicationContext(), "StudentID are required!", Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(this, "Please enter your StudentID", Toast.LENGTH_LONG).show();
-            return;
+            Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(getApplicationContext(), Order.class)); //to access order.class
+
+
         }
     }
-  }
 }
