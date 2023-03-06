@@ -1,0 +1,33 @@
+package com.example.nuniformbeta;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class ViewCart extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_view_cart);
+        setTitle("Back to Home");
+
+        Intent a = getIntent();
+
+        String quan = a.getStringExtra("quan");
+        String quan2 = a.getStringExtra("quan2");
+        String quan3 = a.getStringExtra("quan3");
+
+        String unif = a.getStringExtra("unif");
+        String tour = a.getStringExtra("tour");
+        String med = a.getStringExtra("med");
+
+
+        TextView txtOutput = findViewById(R.id.txtOutput);
+        txtOutput.setText( "\n" + quan + " " + unif );
+
+
+    }
+}
