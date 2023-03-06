@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NUniformBeta</string>
+    <string-array name="uniftype">
+        <item>Select uniform..</item>
+        <item>Traditional Uniform</item>
+        <item>Tourism Uniform</item>
+        <item>Med Uniform</item>
+    </string-array>
+</resources>
