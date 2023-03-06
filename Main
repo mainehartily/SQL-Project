@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+=        setContentView(R.layout.activity_main);
 
     }
 
@@ -29,14 +29,23 @@ public class MainActivity extends AppCompatActivity {
         {
             Toast.makeText(this, "StudentID are required!", Toast.LENGTH_LONG).show();
         }
-        else  {
+
+
+
+        else if (input.length() < 10)
+        {
+            Toast.makeText(this, "Your Student ID is not on the System", Toast.LENGTH_LONG).show();
+            return;
+        }
+        else
+        {
             Toast.makeText(this, "Login Successful", Toast.LENGTH_LONG).show();
             //startActivity(new Intent(getApplicationContext(), Order.class)); //to access order.class
             Intent i = new Intent (this, Order.class);
             startActivity(i);
         }
 
-        
+
 
 
     }
