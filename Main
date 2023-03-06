@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         else if (input.length() < 10)
         {
-            Toast.makeText(this, "Your Student ID is not on the System", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Your Student ID must contain 10 characters", Toast.LENGTH_LONG).show();
             return;
         }
         else
